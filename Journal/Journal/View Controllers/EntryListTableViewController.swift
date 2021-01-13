@@ -15,6 +15,8 @@ class EntryListTableViewController: UITableViewController {
     //  MARK: - Lifecyle functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let journal = journal else { return }
+        self.title = journal.title
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +39,7 @@ class EntryListTableViewController: UITableViewController {
         
         guard let journal = journal else { return cell }
         cell.textLabel?.text = journal.entries[indexPath.row].title
+        cell.detailTextLabel?.text = journal.entries[indexPath.row].timestamp
         
         return cell
     }

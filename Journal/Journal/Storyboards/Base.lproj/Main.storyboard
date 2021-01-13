@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="IDD-U2-MP0">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Journal Title Here..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vn2-cd-EGa">
-                                    <rect key="frame" x="41.5" y="0.0" width="331" height="34"/>
+                                    <rect key="frame" x="41.5" y="12" width="331" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2e-Pr-rxz">
-                                    <rect key="frame" x="176" y="46" width="62" height="30"/>
+                                    <rect key="frame" x="176" y="58" width="62" height="30"/>
                                     <state key="normal" title="  Create  "/>
                                     <connections>
                                         <action selector="createJournalButtonTapped:" destination="WU4-BW-h9B" eventType="touchUpInside" id="Otz-x7-szu"/>
@@ -36,7 +36,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="a2e-Pr-rxz" firstAttribute="top" secondItem="vn2-cd-EGa" secondAttribute="bottom" constant="12" id="CJb-Bn-NzO"/>
-                                <constraint firstItem="vn2-cd-EGa" firstAttribute="top" secondItem="IDD-U2-MP0" secondAttribute="top" id="DDb-eA-c2u"/>
+                                <constraint firstItem="vn2-cd-EGa" firstAttribute="top" secondItem="IDD-U2-MP0" secondAttribute="top" constant="12" id="DDb-eA-c2u"/>
                                 <constraint firstItem="vn2-cd-EGa" firstAttribute="width" secondItem="IDD-U2-MP0" secondAttribute="width" multiplier="0.8" id="EHW-33-J4D"/>
                                 <constraint firstItem="a2e-Pr-rxz" firstAttribute="centerX" secondItem="IDD-U2-MP0" secondAttribute="centerX" id="Vs5-vB-oMI"/>
                                 <constraint firstItem="vn2-cd-EGa" firstAttribute="centerX" secondItem="IDD-U2-MP0" secondAttribute="centerX" id="ifY-qp-1n8"/>
@@ -44,7 +44,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="journalCell" textLabel="Vat-ja-AQa" detailTextLabel="r8M-TX-rVc" style="IBUITableViewCellStyleValue1" id="WhV-Mg-s2U">
-                                <rect key="frame" x="0.0" y="108" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WhV-Mg-s2U" id="vhB-9B-vOK">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -101,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="-1435" y="38"/>
         </scene>
-        <!--My Journal-->
+        <!--(Journal Title)-->
         <scene sceneID="swC-sz-Dpo">
             <objects>
                 <tableViewController id="ZXx-pJ-oM0" customClass="EntryListTableViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,17 +110,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" textLabel="Ze9-at-mb7" style="IBUITableViewCellStyleDefault" id="sqJ-5v-oyR">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" textLabel="Ze9-at-mb7" detailTextLabel="EJA-Aj-HyN" style="IBUITableViewCellStyleSubtitle" id="sqJ-5v-oyR">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sqJ-5v-oyR" id="e4j-1K-51h">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ze9-at-mb7">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EJA-Aj-HyN">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -136,7 +143,7 @@
                             <outlet property="delegate" destination="ZXx-pJ-oM0" id="CDN-Ll-gA5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Journal" id="a7Q-T0-OIL">
+                    <navigationItem key="navigationItem" title="(Journal Title)" id="a7Q-T0-OIL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qoJ-GQ-dtg">
                             <connections>
                                 <segue destination="hSV-eg-tSt" kind="show" identifier="toEntryVC" id="ZSt-Dz-7EO"/>
@@ -165,8 +172,8 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BFu-3I-iaA">
                                 <rect key="frame" x="20.5" y="170" width="373" height="638"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -199,7 +206,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bodyTextView" destination="BFu-3I-iaA" id="uGm-36-Qum"/>
-                        <outlet property="entryDetailNaviationITem" destination="bvz-OG-4di" id="ZFb-Kq-XBC"/>
                         <outlet property="titleTextField" destination="I1w-wn-6yT" id="sqD-yR-MJW"/>
                     </connections>
                 </viewController>
@@ -209,12 +215,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZSt-Dz-7EO"/>
+        <segue reference="1I2-bq-Bmh"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

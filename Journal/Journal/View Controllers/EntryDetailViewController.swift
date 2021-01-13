@@ -12,7 +12,6 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
     // MARK: - IBOutlets
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var bodyTextView: UITextView!
-    @IBOutlet weak var entryDetailNaviationITem: UINavigationItem!
     
     //  MARK: Properties
     var journal: Journal?
@@ -21,6 +20,8 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
     //  MARK: Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let entry = entry else { return }
+        self.title = entry.timestamp
         updateView()
     }
     
@@ -54,6 +55,5 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
         guard let entry = entry else { return }
         titleTextField.text = entry.title
         bodyTextView.text = entry.body
-        entryDetailNaviationITem.title = "(The Date Here)"
     }
 }
